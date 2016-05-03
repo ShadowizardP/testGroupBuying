@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="popView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RcY-XG-Pkn">
+                    <rect key="frame" x="0.0" y="0.0" width="150" height="500"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="kkv-q2-hBr"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="W9Z-7O-aFt"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RyU-xo-d2r">
+                    <rect key="frame" x="150" y="0.0" width="150" height="500"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="pla-y8-MOz"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="4zb-v5-d6o"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="RyU-xo-d2r" firstAttribute="leading" secondItem="RcY-XG-Pkn" secondAttribute="trailing" id="8zD-E1-hzA"/>
+                <constraint firstItem="RyU-xo-d2r" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="A4E-EC-HSf"/>
+                <constraint firstItem="RyU-xo-d2r" firstAttribute="leading" secondItem="RcY-XG-Pkn" secondAttribute="trailing" id="h6l-Dr-Wbx"/>
+                <constraint firstAttribute="trailing" secondItem="RyU-xo-d2r" secondAttribute="trailing" id="mIR-rH-KIG"/>
+                <constraint firstItem="RcY-XG-Pkn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nJR-34-NRS"/>
+                <constraint firstItem="RyU-xo-d2r" firstAttribute="leading" secondItem="RcY-XG-Pkn" secondAttribute="trailing" constant="35" id="rBZ-Hq-0ie"/>
+                <constraint firstItem="RyU-xo-d2r" firstAttribute="width" secondItem="RcY-XG-Pkn" secondAttribute="width" id="s40-id-9Vz"/>
+                <constraint firstItem="RcY-XG-Pkn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uZp-oZ-PYL"/>
+                <constraint firstAttribute="bottom" secondItem="RcY-XG-Pkn" secondAttribute="bottom" id="wxh-se-3OI"/>
+                <constraint firstAttribute="bottom" secondItem="RyU-xo-d2r" secondAttribute="bottom" id="zDo-Mu-52j"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="h6l-Dr-Wbx"/>
+                    <exclude reference="rBZ-Hq-0ie"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="leftTV" destination="RcY-XG-Pkn" id="9In-zR-xGB"/>
+                <outlet property="rightTV" destination="RyU-xo-d2r" id="qKO-Kw-xfS"/>
+            </connections>
+        </view>
+    </objects>
+</document>

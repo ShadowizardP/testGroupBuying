@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondPopViewController">
+            <connections>
+                <outlet property="changeCityBtn" destination="zms-GV-vGp" id="gBk-rk-bhk"/>
+                <outlet property="regionView" destination="M2p-0I-aat" id="iKQ-IC-u1r"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZ8-9o-AQ4">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zms-GV-vGp">
+                            <rect key="frame" x="264" y="5" width="72" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="fZ2-Ya-Wmb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <inset key="titleEdgeInsets" minX="50" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="切换城市" image="btn_changeCity">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="highlighted" image="btn_changeCity_selected"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="fZ2-Ya-Wmb"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="changeCityBtnClicked:" destination="-1" eventType="touchUpInside" id="2nE-wJ-5gd"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_filter_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="YFG-4w-0Wx">
+                            <rect key="frame" x="570" y="12" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="28x-ak-HOm"/>
+                                <constraint firstAttribute="height" constant="20" id="vH6-OD-sFo"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="7Zv-AE-iLk"/>
+                        <constraint firstItem="YFG-4w-0Wx" firstAttribute="centerY" secondItem="KZ8-9o-AQ4" secondAttribute="centerY" id="AOs-4H-qQW"/>
+                        <constraint firstItem="zms-GV-vGp" firstAttribute="top" secondItem="KZ8-9o-AQ4" secondAttribute="top" id="KN5-tt-Js5"/>
+                        <constraint firstAttribute="trailing" secondItem="zms-GV-vGp" secondAttribute="trailing" id="WDQ-Q3-Ra6"/>
+                        <constraint firstItem="zms-GV-vGp" firstAttribute="leading" secondItem="KZ8-9o-AQ4" secondAttribute="leading" id="b76-vD-qA0"/>
+                        <constraint firstAttribute="bottom" secondItem="zms-GV-vGp" secondAttribute="bottom" id="eB2-ua-ErL"/>
+                        <constraint firstAttribute="trailing" secondItem="YFG-4w-0Wx" secondAttribute="trailing" constant="10" id="nhU-mm-Ksn"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2p-0I-aat">
+                    <rect key="frame" x="0.0" y="54" width="600" height="546"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="M2p-0I-aat" secondAttribute="trailing" id="EBu-UV-u2a"/>
+                <constraint firstItem="KZ8-9o-AQ4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HfH-Yp-s9E"/>
+                <constraint firstItem="M2p-0I-aat" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Oe7-g1-W68"/>
+                <constraint firstAttribute="trailing" secondItem="KZ8-9o-AQ4" secondAttribute="trailing" id="aU8-x3-QX6"/>
+                <constraint firstItem="M2p-0I-aat" firstAttribute="top" secondItem="KZ8-9o-AQ4" secondAttribute="bottom" constant="10" id="sgY-dD-56j"/>
+                <constraint firstItem="KZ8-9o-AQ4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vJw-VC-oAy"/>
+                <constraint firstAttribute="bottom" secondItem="M2p-0I-aat" secondAttribute="bottom" id="y7e-F5-moW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_changeCity" width="30" height="30"/>
+        <image name="btn_changeCity_selected" width="30" height="30"/>
+        <image name="icon_filter_arrow" width="16" height="16"/>
+    </resources>
+</document>
